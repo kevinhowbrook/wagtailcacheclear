@@ -1,0 +1,13 @@
+{% extends "wagtailadmin/base.html" %}
+{% load wagtailadmin_tags i18n static wagtailcore_tags %}
+
+{% block titletag %}{% trans 'Cache Management' %}{% endblock %}
+
+{% block content %}
+    {% trans "Cache management" as title_trans %}
+    {% include "wagtailadmin/shared/header.html" with title=title_trans %}
+
+    <div class="nice-padding">
+        <a href="{{ link }}">clear all cache</a>
+    </div>
+{% endblock %}
